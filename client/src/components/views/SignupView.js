@@ -51,19 +51,19 @@ const SignupView = () => {
     const errors = {};
 
     if (!isLength(formData.username, { min: 6, max: 30 })) {
-      errors.username = "Must be between 6 and 30 characters long";
+      errors.username = "Le nom d'utilisateur doit contenir entre 6 et 30 caractères";
     }
 
     if (contains(formData.username, " ")) {
-      errors.username = "Must contain only valid characters";
+      errors.username = "Le nom d'utilisateur ne doit pas contenir d'espaces";
     }
 
     if (!isLength(formData.password, { min: 8 })) {
-      errors.password = "Must be at least 8 characters long";
+      errors.password = "Le mot de passe doit contenir au moins 8 caractères";
     }
 
     if (!isEmail(formData.email)) {
-      errors.email = "Must be a valid email address";
+      errors.email = "L'adresse email n'est pas valide";
     }
 
     setErrors(errors);
@@ -80,14 +80,14 @@ const SignupView = () => {
           </Link>
         </Typography>
         <Typography variant="h5" gutterBottom>
-          Sign Up
+          S'inscrire
         </Typography>
         <Typography color="text.secondary">
-          Already have an account? <Link to="/login">Login</Link>
+          Déjà un comte? <Link to="/login">Connexion</Link>
         </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
-            label="Username"
+            label="Nom d'utilisateur"
             fullWidth
             margin="normal"
             autoFocus
@@ -99,7 +99,7 @@ const SignupView = () => {
             helperText={errors.username}
           />
           <TextField
-            label="Email Address"
+            label="Addresse email"
             fullWidth
             margin="normal"
             autoComplete="email"
@@ -111,7 +111,7 @@ const SignupView = () => {
             helperText={errors.email}
           />
           <TextField
-            label="Password"
+            label="Mot de passe"
             fullWidth
             required
             margin="normal"
@@ -125,7 +125,7 @@ const SignupView = () => {
           />
           <ErrorAlert error={serverError} />
           <Button type="submit" fullWidth variant="contained" sx={{ my: 2 }}>
-            Sign Up
+            S'inscrire
           </Button>
         </Box>
         <Box sx={{ mt: 3 }}>

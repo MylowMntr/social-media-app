@@ -101,14 +101,14 @@ const PostBrowser = (props) => {
 
   const contentTypeSorts = {
     posts: {
-      "-createdAt": "Latest",
+      "-createdAt": "Derniers",
       "-likeCount": "Likes",
-      "-commentCount": "Comments",
-      createdAt: "Earliest",
+      "-commentCount": "Commentaires",
+      createdAt: "Premiers",
     },
     liked: {
-      "-createdAt": "Latest",
-      createdAt: "Earliest",
+      "-createdAt": "Derniers",
+      createdAt: "Premiers",
     },
   };
 
@@ -131,10 +131,10 @@ const PostBrowser = (props) => {
         {searchExists && (
           <Box>
             <Typography variant="h5" gutterBottom>
-              Showing results for "{search.get("search")}"
+              Résultats de  "{search.get("search")}"
             </Typography>
             <Typography color="text.secondary" variant="span">
-              {count} results found
+              {count} resultats
             </Typography>
           </Box>
         )}
@@ -153,13 +153,13 @@ const PostBrowser = (props) => {
           <Stack py={5} alignItems="center">
             <Typography variant="h5" color="text.secondary" gutterBottom>
               {posts.length > 0 ? (
-                <>All posts have been viewed</>
+                <>Tous les posts ont été vu !</>
               ) : (
-                <>No posts available</>
+                <>Pas de posts disponibles</>
               )}
             </Typography>
             <Button variant="text" size="small" onClick={handleBackToTop}>
-              Back to top
+              Revenir en haut
             </Button>
           </Stack>
         ) : (
@@ -168,10 +168,10 @@ const PostBrowser = (props) => {
           posts.length > 0 && (
             <Stack pt={2} pb={6} alignItems="center" spacing={2}>
               <Button onClick={fetchPosts} variant="contained">
-                Load more
+                Charger plus !
               </Button>
               <Button variant="text" size="small" onClick={handleBackToTop}>
-                Back to top
+                Revenir en haut
               </Button>
             </Stack>
           )

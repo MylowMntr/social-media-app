@@ -65,7 +65,7 @@ const ProfileView = () => {
     let error = "";
 
     if (content.length > 250) {
-      error = "Bio cannot be longer than 250 characters";
+      error = "La bio ne peut pas dépasser 250 caractères";
     }
 
     return error;

@@ -58,10 +58,10 @@ const CommentEditor = ({ label, comment, addComment, setReplying }) => {
       <Stack spacing={2}>
         <HorizontalStack justifyContent="space-between">
           <Typography variant="h5">
-            {comment ? <>Reply</> : <>Comment</>}
+            {comment ? <>Réponses</> : <>Commentaire</>}
           </Typography>
           <Link to="https://commonmark.org/help/" target="_blank">
-            Markdown Help
+            Markdown
           </Link>
         </HorizontalStack>
 
@@ -92,7 +92,7 @@ const CommentEditor = ({ label, comment, addComment, setReplying }) => {
               mt: 2,
             }}
           >
-            {loading ? <div>Submitting</div> : <div>Submit</div>}
+            {loading ? <div>Envoyé !</div> : <div>Go !</div>}
           </Button>
         </Box>
       </Stack>

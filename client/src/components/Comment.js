@@ -87,7 +87,7 @@ const Comment = (props) => {
             </Typography>
             <Typography variant="subtitle2" color="text.secondary" gutterBottom>
               <Moment fromNow>{comment.createdAt}</Moment>{" "}
-              {comment.edited && <>(Edited)</>}
+              {comment.edited && <>(Modifié)</>}
             </Typography>
           </Box>
         ) : (
@@ -167,7 +167,7 @@ const Comment = (props) => {
                   comment={comment}
                   addComment={addComment}
                   setReplying={setReplying}
-                  label="What are your thoughts on this comment?"
+                  label="A quoi penses-tu ?" 
                 />
               </Box>
             )}

@@ -72,16 +72,16 @@ const MobileProfile = (props) => {
             {user.biography ? (
               <>
                 <Typography textAlign="center" variant="p">
-                  <b>Bio: </b>
+                  <b></b>
                   {user.biography}
                 </Typography>
               </>
             ) : (
               <Typography variant="p">
                 <i>
-                  No bio yet{" "}
+                  Pas de bio{" "}
                   {currentUser && user._id === currentUser.userId && (
-                    <span>- Tap on the edit icon to add your bio</span>
+                    <span>- Clique sur l'icon pour changer ta bio !</span>
                   )}
                 </i>
               </Typography>
@@ -105,7 +105,7 @@ const MobileProfile = (props) => {
           </Box>
         </Stack>
       ) : (
-        <>Loading...</>
+        <>Chargement...</>
       )}
     </Card>
   );

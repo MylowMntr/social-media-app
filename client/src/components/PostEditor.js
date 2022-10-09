@@ -60,21 +60,21 @@ const PostEditor = () => {
           <HorizontalStack spacing={2}>
             <UserAvatar width={50} height={50} username={user.username} />
             <Typography variant="h5">
-              What would you like to post today {user.username}?
+              Quoi de neuf {user.username}?
             </Typography>
           </HorizontalStack>
         )}
 
         <Typography>
           <a href="https://commonmark.org/help/" target="_blank">
-            Markdown Help
+            Markdown
           </a>
         </Typography>
 
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
             fullWidth
-            label="Title"
+            label="Titre"
             required
             name="title"
             margin="normal"
@@ -84,7 +84,7 @@ const PostEditor = () => {
           />
           <TextField
             fullWidth
-            label="Content"
+            label="Message"
             multiline
             rows={10}
             name="content"
@@ -104,7 +104,7 @@ const PostEditor = () => {
               mt: 2,
             }}
           >
-            {loading ? <>Submitting</> : <>Submit</>}
+            {loading ? <>Envoyé !</> : <>C'est parti !</>}
           </Button>
         </Box>
       </Stack>

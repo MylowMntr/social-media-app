@@ -8,28 +8,28 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      minlength: [6, "Must be at least 6 characters long"],
-      maxlength: [30, "Must be no more than 30 characters long"],
+      minlength: [5, "Au moins 5 caractères"],
+      maxlength: [20, "Maximum 20 caractères"],
       validate: {
         validator: (val) => !contains(val, " "),
-        message: "Must contain no spaces",
+        message: "Ne peut pas contenir d'espace",
       },
     },
     email: {
       type: String,
       required: true,
       unique: true,
-      validate: [isEmail, "Must be valid email address"],
+      validate: [isEmail, "Email invalide"],
     },
     password: {
       type: String,
       required: true,
-      minLength: [8, "Must be at least 8 characters long"],
+      minLength: [8, "Au moins 8 caractères"],
     },
     biography: {
       type: String,
       default: "",
-      maxLength: [250, "Must be at most 250 characters long"],
+      maxLength: [200, "Maximum 200 caractères"],
     },
     isAdmin: {
       type: Boolean,
@@ -41,7 +41,7 @@ const UserSchema = new mongoose.Schema(
 
 UserSchema.pre("save", function (next) {
   if (filter.isProfane(this.username)) {
-    throw new Error("Username cannot contain profanity");
+    throw new Error("Nom d'utilisateur non autorisé");
   }
 
   if (this.biography.length > 0) {

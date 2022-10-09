@@ -55,8 +55,8 @@ const CommentBrowser = (props) => {
   };
 
   const sorts = {
-    "-createdAt": "Latest",
-    createdAt: "Earliest",
+    "-createdAt": "Derniers",
+    createdAt: "Premiers",
   };
 
   return (
@@ -76,13 +76,13 @@ const CommentBrowser = (props) => {
           <Stack py={5} alignItems="center">
             <Typography variant="h5" color="text.secondary" gutterBottom>
               {comments.length > 0 ? (
-                <>All comments have been viewed</>
+                <>Tous les commentaires ont élé lus.</>
               ) : (
-                <>No comments available</>
+                <>Pas de commentaire !</>
               )}
             </Typography>
             <Button variant="text" size="small" onClick={handleBackToTop}>
-              Back to top
+              Retourner en haut
             </Button>
           </Stack>
         </>

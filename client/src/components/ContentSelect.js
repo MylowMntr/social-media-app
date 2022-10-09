@@ -7,7 +7,7 @@ const ContentSelect = () => {
 
   return (
     <HorizontalStack spacing={1}>
-      <Typography>Content:</Typography>
+      <Typography>Message:</Typography>
       <Select
         size="small"
         value={content}
@@ -15,7 +15,7 @@ const ContentSelect = () => {
         onChange={(e) => setContent(e.target.value)}
       >
         <MenuItem value={"post"}>Posts</MenuItem>
-        <MenuItem value={"comment"}>Comments</MenuItem>
+        <MenuItem value={"comment"}>Commentaires</MenuItem>
       </Select>
     </HorizontalStack>
   );

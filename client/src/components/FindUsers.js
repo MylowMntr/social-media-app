@@ -40,7 +40,7 @@ const FindUsers = () => {
         <HorizontalStack justifyContent="space-between">
           <HorizontalStack>
             <AiOutlineUser />
-            <Typography>Find Others</Typography>
+            <Typography>Chercher quelqu'un</Typography>
           </HorizontalStack>
           <IconButton
             sx={{ padding: 0 }}
@@ -63,7 +63,7 @@ const FindUsers = () => {
                 <UserAvatar width={30} height={30} username={user.username} />
                 <Typography>{user.username}</Typography>
               </HorizontalStack>
-              <Link to={"/users/" + user.username}>View</Link>
+              <Link to={"/users/" + user.username}>Voir</Link>
             </HorizontalStack>
           ))
         )}

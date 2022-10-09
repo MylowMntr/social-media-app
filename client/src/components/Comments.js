@@ -98,7 +98,7 @@ const Comments = () => {
     <Stack spacing={2}>
       <CommentEditor
         addComment={addComment}
-        label="What are your thoughts on this post?"
+        label="A quoi penses-tu ?"
       />
 
       {comments.length > 0 ? (
@@ -124,10 +124,10 @@ const Comments = () => {
         >
           <Box>
             <Typography variant="h5" color="text.secondary" gutterBottom>
-              No comments yet...
+              Pas de commentaires...
             </Typography>
             <Typography variant="body" color="text.secondary">
-              Be the first one to comment!
+              Soit le premier à commenter !
             </Typography>
           </Box>
         </Box>

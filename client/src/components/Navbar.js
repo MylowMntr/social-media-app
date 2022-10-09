@@ -100,7 +100,7 @@ const Navbar = () => {
           <Box component="form" onSubmit={handleSubmit}>
             <TextField
               size="small"
-              label="Search for posts..."
+              label="Rechercher un post..."
               sx={{ flexGrow: 1, maxWidth: 300 }}
               onChange={handleChange}
               value={search}
@@ -126,15 +126,15 @@ const Navbar = () => {
               <IconButton component={Link}  to={"/users/" + username}>
                 <UserAvatar width={30} height={30} username={user.username} />
               </IconButton>
-              <Button onClick={handleLogout}>Logout</Button>
+              <Button onClick={handleLogout}>Déconnexion</Button>
             </>
           ) : (
             <>
               <Button variant="text" sx={{ minWidth: 80 }} href="/signup">
-                Sign Up
+                S'inscrire
               </Button>
               <Button variant="text" sx={{ minWidth: 65 }} href="/login">
-                Login
+                Connexion
               </Button>
             </>
           )}
@@ -144,7 +144,7 @@ const Navbar = () => {
         <Box component="form" onSubmit={handleSubmit} mt={2}>
           <TextField
             size="small"
-            label="Search for posts..."
+            label="Rechercher des posts..."
             fullWidth
             onChange={handleChange}
             value={search}
